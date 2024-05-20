@@ -23,6 +23,7 @@ Map<Integer, Map<Id, String>> groupNameToSTs = g.createServiceTerritoryGroups();
 System.debug(JSON.serializePretty(groupNameToSTs));
 
 // Get the Scheduling Policy to be used for the groups
+// If you want to use the Default Policy of the Optimization Job, set it to '0'
 Id spId = [select Id from FSL__Scheduling_Policy__c where Name = 'Customer First'].Id;
 
 // Update optimizaiton scheduled job with the new groups
