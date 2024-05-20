@@ -82,7 +82,7 @@ public with sharing class ServiceTerritoryGrouping {
     /**
      * Update Optimization Job with the Territory Groups
      */
-    public Boolean updateServiceTerritoryGroupsOnOptimizationJob(String jobName, Id spId, Map<Integer, Map<Id, String>> serviceTerritoryGroups){
+    public Boolean updateServiceTerritoryGroupsOnOptimizationJob(String jobName, String spId, Map<Integer, Map<Id, String>> serviceTerritoryGroups){
         List<FSL.ScheduleJobsApi.GroupData> groupList = new List<FSL.ScheduleJobsApi.GroupData>();
         if (!serviceTerritoryGroups.isEmpty()){
             for (Map<Id, String> stIdToName : serviceTerritoryGroups.values()){
