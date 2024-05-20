@@ -29,4 +29,4 @@ Id spId = [select Id from FSL__Scheduling_Policy__c where Name = 'Customer First
 g.updateServiceTerritoryGroupsOnOptimizationJob('ESO', spId, groupNameToSTs);
 ```
 
-Additionally you can set the maximum number of service territories in a single group and/or restrict the selection by a list of Service Territory Ids. This is recommended when processing larger amounts of data, and for example whereby the optimization jobs are restricted to specific areas.
+Additionally you can set the maximum number of service territories in a single group and/or restrict the selection by a list of Service Territory Ids. This can be achieved by using the right constructor to initiate the ```ServiceTerritoryGrouping``` Apex Class. This is recommended when processing larger amounts of data, and for example whereby the optimization jobs are restricted to specific areas.
